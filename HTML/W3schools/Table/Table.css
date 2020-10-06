@@ -1,0 +1,77 @@
+.table {
+	border-collapse: collapse;
+	
+}
+
+#Redleft {
+	height: 550px;
+	width: 100px;
+	border: 1px solid white;
+	background-color: red;
+}
+
+#Redright {
+	height: 550px;
+	width: 100px;
+	border: 1px solid white;
+	background-color: red;
+	
+}
+
+.Middlewhite1 {
+	width: 60px;
+	background-color: white;
+}
+
+.Middlegreen1 {
+	width: 90px;
+	background-color: green;
+	
+}
+
+.Secondwhite1 {
+	width: 60px;
+	background-color: white;
+}
+
+.b {
+	border: 1px solid blue;
+	background-color: blue;
+}
+
+.a {
+	border: 1px solid white;
+}
+
+.c {
+	border: 1px solid ;
+}
+.d {
+	border: 1px solid white;
+}
+
+.white {
+	background-color: white;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.e {
+	background-color: green;
+	border-right: 0px solid green;
+	border-right: 0px solid green;
+}
+.f {
+	background-color: green;
+	border-right: 0px solid green;
+}
+.g {
+	background-color: green;
+	border-left: 0px solid green;
+}
+
+.height {
+	height: 20%;
+}

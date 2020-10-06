@@ -1,0 +1,75 @@
+body {
+	background-color: #595959;
+}
+
+.container {
+	width: auto;
+	height: auto;
+	padding: 1px;
+}
+
+.h1 {
+	text-align: center;
+}
+
+.login {
+	width: 170px;
+	margin-left: 530px;
+	margin-top: 95px;
+	border: 2px dotted black;
+	padding: 10px;
+	
+}
+
+.cancel {
+	width: 43px;
+	margin-left: 57px;
+	background-color: red;
+	border: 1px solid black;
+	box-shadow: 10px;
+	border-radius: 4px;
+}
+
+.submit {
+	background-color: green;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+.cancel:hover {
+	box-shadow: 0 7px 16px 0 rgba(0,0,0,0.24), 0 4px 50px 0 rgba(0,0,0,0.19);
+}
+
+.submit:hover {
+	box-shadow: 0 7px 16px 0 rgba(0,0,0,0.24), 0 4px 50px 0 rgba(0,0,0,0.19);
+}
+
+.image {
+	width: 50px;
+	height: 50px; 
+	margin-left: 55px;
+}
+
+.block {
+	margin-left: 200px;
+	width: 10px;
+	height: 10px;
+	
+}
+
+.login_form #username_error,
+.login_form #password_error {
+	font-size: 15px;
+	color: red;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	border-radius: 3px;
+	border: 2px solid red;
+	display: none;
+}
+
+.enter {
+	background-color: #696969;
+	border: none;
+	border-bottom: 1px solid white;
+}

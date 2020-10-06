@@ -1,0 +1,350 @@
+.ul {
+	list-style-type: none;
+	margin-left: 25px;
+}
+
+.header {
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 100%);
+	text-align: center;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 12px;
+}
+
+.nav {
+	margin-top: -45px;
+	padding-left: 490px;
+	color: white;
+	
+}
+
+.section {
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 100%);
+	color: white;
+	margin-top: -5px;
+	padding-bottom: 50px;
+}
+
+.link {
+	color: white;
+	text-decoration: none;
+}
+
+.home {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	
+}
+
+.page1 {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.page2 {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.page3 {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.page4 {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.About {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+.home:hover {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #0022d1;
+}
+
+.page1:hover {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #0022d1;
+}
+
+.page2:hover {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #0022d1;
+}
+
+.page3:hover {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #0022d1;
+}
+
+.page4:hover {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #0022d1;
+}
+
+.About:hover {
+	float: left;
+	cursor: pointer;
+	width: 45px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #0022d1;
+}
+
+.aside {
+	float: left;
+	background-color: grey;
+	width: auto;
+	height: 466.5px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.Red {
+	background-color: red;
+	color: white;
+	border: 1px solid red;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.Blue {
+	background-color: blue;
+	color: white;
+	border: 1px solid blue;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.White {
+	background-color: white;
+	color: #595959;
+	border: 1px solid white;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.Purple {
+	background-color: purple;
+	color: white;
+	border: 1px solid purple;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.Green {
+	background-color: green;
+	color: white;
+	border: 1px solid green;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.Yellow {
+	background-color: yellow;
+	color: black;
+	border: 1px solid yellow;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.Orange {
+	background-color: orange;
+	color: white;
+	border: 1px solid orange;
+	cursor: pointer;
+	border-spacing: 0px;
+	width: 170px;
+	height: 40px;
+}
+
+.H2 {
+	color: white;
+}
+
+.H3 {
+	text-align: center;
+	color: black;
+}
+
+.line {
+	width: 900px;
+	
+}
+
+.H4 {
+	margin-left: 260px;
+}
+
+.P2 {
+	margin-left: 260px;
+	text-indent: 50px;
+}
+
+.footer {
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(0,212,255,1) 100%);
+	color: white;
+	height: 137px;
+}
+
+.link1 {
+	color: white;
+}
+
+.addressdiv {
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.instagramimg {
+	margin-top: 25px;
+	margin-left: 225px;
+	cursor: pointer;
+	float: left;
+}
+
+.facebookimg {
+	margin-top: 25px;
+	margin-left: 25px;
+	cursor: pointer;
+	float: left;
+}
+
+.twitterimg {
+	margin-top: 25px;
+	margin-left: 25px;
+	cursor: pointer;
+	float: left;
+}
+
+.copyright {
+	float: right;
+	margin-right: 10px;
+}

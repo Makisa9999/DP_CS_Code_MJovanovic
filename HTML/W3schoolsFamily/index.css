@@ -1,0 +1,58 @@
+
+body {
+	background-color: #595959;
+}
+
+.container {
+	width: auto;
+	height: auto;
+	padding: 1px;
+}
+
+.heading {
+	background-color: #595959;
+	
+}
+
+.text {
+	width: auto;
+	text-align: center;
+	color: #ffffff;
+	
+}
+
+.line {
+	width: 1175px;
+	color: #ffffff;
+	float: center;
+	
+}
+ 
+.menu {
+	width: 250px;
+	height: 490px;
+	background-color: #858585;
+	margin-left: 43px;
+}
+
+.orderedlist {
+	margin-top: 15px;
+	font-size: 30px; 
+	
+}
+
+a:link {
+	color: #ffffff;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: black;
+}
+
+a:active {
+	color: #ffffff;
+}

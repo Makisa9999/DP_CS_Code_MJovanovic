@@ -1,0 +1,16 @@
+.Cars {
+	background-color: #595959;
+}
+
+.select {
+	background-color: #696969;
+	color: #ffffff;
+}
+
+.button {
+	float: left;
+}
+
+.button:hover {
+	float: right;
+}

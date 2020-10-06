@@ -1,0 +1,157 @@
+body {
+	background-color: #696969;
+}
+.unorderedlist {
+	background-color: #595959;
+	
+}
+.ul {
+	list-style-type: none;
+	background-color: #595959;
+	
+}
+.divhome {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #595959;
+	border-right: 1px solid #f0f0f0;
+}
+.divaudi {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #595959;
+	border-right: 1px solid #f0f0f0;
+}
+.divbmw {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #595959;
+	border-right: 1px solid #f0f0f0;
+}
+.divmercedes {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #595959;
+	border-right: 1px solid #f0f0f0;
+}
+.divferrari {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #595959;
+	border-right: 1px solid #f0f0f0;
+}
+.divlamborghini {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color:#595959;
+	border-right: 1px solid #f0f0f0;
+}
+.divbugatti {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #595959;
+}
+.divhome:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	border-right: 1px solid red;
+	cursor: pointer;
+}
+.divaudi:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	border-right: 1px solid red;
+	cursor: pointer;
+}
+.divbmw:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	border-right: 1px solid red;
+	cursor: pointer;
+}
+.divmercedes:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	border-right: 1px solid red;
+	cursor: pointer;
+}
+.divferrari:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	border-right: 1px solid red;
+	cursor: pointer;
+}
+.divlamborghini:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	border-right: 1px solid red;
+	cursor: pointer;
+}
+.divbugatti:hover {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #a1a1a1;
+	cursor: pointer;
+}
+.link {
+	color: white;
+	text-decoration: none;
+}
+.Potpis {
+	float: right;
+	border: 1px dotted white;
+	margin-top: -10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.text {
+	
+}
