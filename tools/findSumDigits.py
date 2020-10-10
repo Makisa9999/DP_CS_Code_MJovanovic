@@ -11,8 +11,9 @@ def findSumDigits (a):
 
         for i in range(0, len(astr), 1):
             suma = suma + int(astr[i])
-            return suma
+        return suma
 
 print(findSumDigits(123))
+print(findSumDigits(124))
 print(findSumDigits(-122))
 print(findSumDigits(1002))
