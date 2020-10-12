@@ -1,0 +1,53 @@
+#A001 {
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+#A002 {
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#A003 {
+    background-color: blue;
+}
+
+#A007 {
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    
+}
+
+a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+#A005 {
+    float: left;
+    width: 150px;
+}
+
+#A005:hover {
+    background-color: slategray;
+}

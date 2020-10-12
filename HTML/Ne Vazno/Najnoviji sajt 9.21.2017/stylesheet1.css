@@ -1,0 +1,30 @@
+p {
+	font-size: 12;
+	text-decoration: underline;
+	color: #6521C4
+}
+
+body {
+	background-color: #cccccc;
+}
+
+.tri {
+	width: 0px;
+	height: 0px;
+	/*border-top: 60px solid blue;*/
+	border-right: 60px solid transparent;
+	border-bottom: 60px solid skyblue;
+	border-left: 60px solid transparent;
+}
+
+#mainpart {
+	background-color: #db2e2e;
+	width: auto;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	text-align: center;
+}
+hr {
+	transform: rotate(90deg);
+}

@@ -1,0 +1,100 @@
+#fatherDiv {
+	
+}
+
+#sonDiv {
+	float: left;
+	margin: 10px;
+	background-color: #8596b2;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#babyDiv {
+	float: left;
+	margin: 10px;
+	background-color: #aeb5c1;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+#dad {
+	max-width: 1000px;
+	max-height: 1000px;
+	background-color: #7c2f5f;
+}
+
+#long {
+	color: #00def7;
+}
+
+#dad1 {
+	background-color: #f70000;
+	margin: 50px;
+	border: 2px solid grey;
+	padding: 30px;
+}
+
+#long1 {
+	color: #00ff3b
+}
+
+p {outline-color:red;}
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+
+#long2 {
+	text-indent: 50px;
+}
+
+table, tr, td {
+	border: 2px dotted red;
+}
+
+table {
+	width: 100%;
+}
+
+#kill {
+	border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

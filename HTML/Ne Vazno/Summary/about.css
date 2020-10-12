@@ -1,0 +1,33 @@
+h1 {
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+body {
+	background-color: #3a3d42;
+}
+
+#Body {
+	
+}
+
+#Pictures {
+	float: right;
+}
+
+#Text {
+	float: left;
+	
+}
+
+#Naslov {
+	text-align: center;
+}
+
+#Slika {
+	width: 100 px;
+	height: 100 px;
+}

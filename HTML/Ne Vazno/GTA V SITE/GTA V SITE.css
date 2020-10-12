@@ -1,0 +1,23 @@
+hr {
+	width: 300px;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+body {
+	background-image: url("GTAVSITE.jpg");
+}
+
+button {
+	border: 1px solid blue;
+	width: 100px;
+	height: 100px;
+}
+
+.button1 {
+	background-image: url("1 000 000$.jpg")
+}

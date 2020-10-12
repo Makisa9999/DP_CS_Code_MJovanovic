@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1561050767 source:c:\users\mario jovanovic\desktop\programiranje\c\ucenje\main.c
+	<stdio.h>
+	<stdlib.h>
+	"MariosInfo.h"
+
+1561047845 c:\users\mario jovanovic\desktop\programiranje\c\ucenje\mariosinfo.h
+

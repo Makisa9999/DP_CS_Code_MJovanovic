@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1578953790 source:c:\users\mario jovanovic\desktop\programiranje\c\projectyoutube\2.file\drugifile\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Mario.h"
+
+1578427846 c:\users\mario jovanovic\desktop\programiranje\c\projectyoutube\2.file\drugifile\mario.h
+

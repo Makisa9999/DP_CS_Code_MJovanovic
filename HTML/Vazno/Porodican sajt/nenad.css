@@ -1,0 +1,14 @@
+body {
+	background-image: url("4469331-best-wallpapers.jpg");
+	background-repeat: no-repeat;
+}
+
+h1,p {
+	color: white;
+	text-align: center;
+}
+
+#A001 {
+	height: 10px;
+	width: 15px;
+}

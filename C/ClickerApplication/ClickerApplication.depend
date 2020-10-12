@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1595974991 source:c:\users\mario jovanovic\desktop\programiranje\c\clickerapplication\main.c
+	<stdio.h>
+	<stdlib.h>
+

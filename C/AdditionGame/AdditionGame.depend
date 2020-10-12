@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1596198641 source:c:\users\mario jovanovic\desktop\programiranje\c\additiongame\main.c
+	<stdio.h>
+	<stdlib.h>
+

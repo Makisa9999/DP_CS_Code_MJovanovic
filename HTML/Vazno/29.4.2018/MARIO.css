@@ -1,0 +1,43 @@
+body {
+	background-color: #BABABA;
+}
+
+#A008 {
+	Width: 10%;
+	float: center;
+}
+
+#A001 {
+	background-color: grey;
+	color: white;
+	text-align: center;
+}
+
+#A002 {
+	
+}
+
+#A003 {
+	
+}
+
+#A004 {
+	
+}
+
+#A005 {
+	width: 550px;
+	height: 367px;
+	float: right;
+}
+
+#A006 {
+	padding: 1 px;
+}
+
+#A007 {
+	background-color: grey;
+	font-size: 250 px;
+	width: 1350px;
+	padding: 25 px;
+}

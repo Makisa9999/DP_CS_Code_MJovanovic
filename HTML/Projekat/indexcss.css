@@ -1,0 +1,264 @@
+#A001 {
+	float: center;
+}
+
+#A002 {
+	text-align: center;
+	color: Black;
+	
+}
+
+#First {
+	float: left;
+	
+}
+
+#Second {
+	float: left;
+	
+}
+
+#Third {
+	float: left;
+	
+}
+
+#Fourth {
+	float: left;
+	
+}
+
+#Fifth {
+	float: left;
+}
+
+#A003 {
+	padding-bottom: 10px;
+	padding-left: 172px;
+	padding-right: 172px;
+	padding-top: 10px;
+	background-color: #737373;
+	color: white;
+}
+
+#A004 {
+	padding-bottom: 10px;
+	padding-left: 172px;
+	padding-right: 172px;
+	padding-top: 10px;
+	background-color: #737373;
+	color: white;
+}
+
+#A005 {
+	padding-bottom: 10px;
+	padding-left: 172px;
+	padding-right: 172px;
+	padding-top: 10px;
+	background-color: #737373;
+	color: white;
+}
+
+#A006 {
+	padding-bottom: 10px;
+	padding-left: 172px;
+	padding-right: 172px;
+	padding-top: 10px;
+	background-color: #737373;
+	color: white;
+}
+
+#A007 {
+	padding-bottom: 10px;
+	padding-left: 171px;
+	padding-right: 171px;
+	padding-top: 10px;
+	background-color: #737373;
+	color: white;
+}
+
+#A003:hover {
+	border: 2px dotted #ffffff;
+	background-color: #262626;
+}
+/*focus means clicked button*/
+#A003:focus {
+	border: 2px solid red
+}
+
+#A004:hover {
+	border: 2px dotted #ffffff;
+	background-color: #262626;
+}
+
+#A004:focus {
+	border: 2px solid red
+}
+
+#A005:hover {
+	border: 2px dotted #ffffff;
+	background-color: #262626;
+}
+
+#A005:focus {
+	border: 2px solid red
+}
+
+#A006:hover {
+	border: 2px dotted #ffffff;
+	background-color: #262626;
+}
+
+#A006:focus {
+	border: 2px solid red
+}
+
+#A007:hover {
+	border: 2px dotted #ffffff;
+	background-color: #262626;
+}
+
+#A007:focus {
+	border: 2px solid red
+}
+
+#First {
+	display: inline-block;
+	position: relative;
+}
+
+#A009 {
+	display: none;
+	position: absolute;
+}
+
+#First:hover #A009 {
+	display: block;
+}
+
+#First:hover #A008 {
+	float: left;
+	clear: left;
+}
+
+#A008 {
+	text-decoration: none;
+	color: blue;
+}
+
+#A008:hover {
+	text-decoration: underline;
+	color: red; 
+}
+
+#A014 {
+	width: 373px;
+	height: 30px;
+	background-color: grey;
+	 
+}
+
+#Second {
+	display: inline-block;
+	position: relative;
+}
+
+#A010 {
+	display: none;
+	position: absolute;
+}
+
+#Second:hover #A010 {
+	display: block;
+}
+
+#Second:hover #A008 {
+	float: left;
+	clear: left;
+}
+
+#A015 {
+	width: 393px;
+	height: 30px;
+	background-color: grey;
+}
+
+#Third {
+	display: inline-block;
+	position: relative;
+}
+
+#A011 {
+	display: none;
+	position: absolute;
+}
+
+#Third:hover #A011 {
+	display: block;
+}
+
+#Third:hover #A008 {
+	float: left;
+	clear: left;
+}
+
+#A016 {
+	width: 377px;
+	height: 30px;
+	background-color: grey;
+}
+
+#Fourth {
+	display: inline-block;
+	position: relative;
+}
+
+#A012 {
+	display: none;
+	position: absolute;
+}
+
+#Fourth:hover #A012 {
+	display: block;
+}
+
+#Fourth:hover #A008 {
+	float: left;
+	clear: left;
+}
+
+#A017 {
+	width: 385px;
+	height: 30px;
+	background-color: grey;
+}
+
+#Fifth {
+	display: inline-block;
+	position: relative;
+}
+
+#A013 {
+	display: none;
+	position: absolute;
+}
+
+#Fifth:hover #A013 {
+	display: block;
+}
+
+#Fifth:hover #A008 {
+	float: left;
+	clear: left;
+}
+
+#A018 {
+	width: 371px;
+	height: 30px;
+	background-color: grey;
+}
+
+#A019 {
+	background-color: #0FBC00
+}
+ 

@@ -1,0 +1,25 @@
+
+body {
+	background-color: #025df7;
+}
+
+a:active {
+	color: white;
+}
+
+a:hover {
+	color: yellow;
+}
+
+h1,p {
+	text-align: center;
+	color: white;
+}
+
+p {
+	font-size: 20px;
+}
+
+#A001 {
+	float: left;
+}

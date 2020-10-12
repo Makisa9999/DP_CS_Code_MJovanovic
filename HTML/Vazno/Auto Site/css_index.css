@@ -1,0 +1,175 @@
+body {
+	background-color: #a5a5a5;
+}
+
+#A001 {
+	float: left;
+	width: 100%;
+	background-color: black;
+}
+
+#A002 {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: red;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A003 {
+	color: white;
+	
+}
+
+#A004 {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: black;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A005 {
+	color: white;
+}
+
+#A006 {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: black;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A007 {
+	color: white;
+}
+
+#A008 {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: black;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A009 {
+	color: white;
+}
+
+#A010 {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: black;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A011 {
+	color: white;
+}
+
+#A012 {
+	
+}
+
+#A013 {
+	text-align: center;
+}
+
+#A014 {
+	float: left;
+	width: 50%
+}
+
+#A015 {
+	
+	
+}
+
+#A016 {
+	float: right;
+}
+
+#A017 {
+	width: 100%;
+}
+
+#A018 {
+	width: 100%;
+}
+
+#A019 {
+	width: auto;
+	height: 140px;
+}
+
+#A020 {
+	float: left;
+}
+#A021 {
+	float: right;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: blue;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A022 {
+	color: white;
+}
+
+#A023 {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+	background-color: black;
+	border-left: dotted 1px white;
+	border-right: dotted 1px white;
+	width: 105px;
+	height: 65px;
+	text-align: center;
+}
+
+#A024 {
+	color: white;
+}
+
+#A025 {
+	
+}
+
+#A026 {
+	
+}
