@@ -12,3 +12,42 @@ wn.exitonclick() #When you click on canvas, it will leave and delete it
 alex.pensize(number) #Will set a pensize to a number in brackets
 '''
 
+wn = turtle.Screen()
+alex = turtle.Turtle()
+
+wn.bgcolor("black")
+alex.color("white")
+alex.forward(75)
+alex.left(90)
+alex.forward(150)
+alex.left(90)
+alex.forward(150)
+alex.left(90)
+alex.forward(150)
+alex.left(90)
+alex.forward(100)
+alex.left(90)
+alex.forward(150)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(150)
+alex.right(90)
+alex.forward(50)
+alex.right(90)
+alex.forward(50)
+alex.right(90)
+alex.forward(150)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(150)
+
+brian = turtle.Turtle()
+
+brian.color("white")
+
+brian.forward(75)
+brian.
+
+wn.exitonclick()
