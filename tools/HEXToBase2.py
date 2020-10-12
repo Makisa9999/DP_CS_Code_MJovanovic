@@ -22,13 +22,12 @@ def hexToBase2_B(s):
 	
 	for i in range(0, len(s), 1):
 		result = result + DIC[s[i]]
-
 	return result
 
 
 print(hexToBase2_B("0"))
 print(hexToBase2_B("A12"))
-print(hexToBase2_B("F"))
+print(hexToBase2_B("FF"))
 '''
   S = passed string parameter only containing hex characters
   HEX = ["0","1","2", . . .,"E",F"]
