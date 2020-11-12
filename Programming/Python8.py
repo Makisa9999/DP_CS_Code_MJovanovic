@@ -48,6 +48,25 @@ brian = turtle.Turtle()
 brian.color("white")
 
 brian.forward(75)
-brian.
+brian.left(90)
+brian.forward(16.6666666666666666)
+brian.left(90)
+brian.forward(50)
+brian.right(90)
+brian.forward(16.666666666666666)
+brian.right(90)
+brian.forward(50)
+brian.left(90)
+brian.forward(16.6666666666666666)
+brian.left(90)
+brian.forward(16.66666666666666666)
+brian.left(90)
+brian.forward(50)
+brian.right(90)
+brian.forward(16.666666666666666666)
+brian.right(90)
+brian.forward(50)
+
+
 
 wn.exitonclick()
