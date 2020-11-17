@@ -15,3 +15,4 @@ def findIntervalSum (a, b):
         return suma
 
 print(findIntervalSum(12,15))
+print(findIntervalSum(1,3))

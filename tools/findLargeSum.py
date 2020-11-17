@@ -9,5 +9,15 @@ def findLargeSum (a,b,c):
     elif c < a < b:
         suma = a + b
         return suma
+    elif a < c < b:
+        suma = b + c
+        return suma
+    elif c < b < a:
+        suma = a + b
+        return suma
+    else:
+        suma = b + c
+        return suma
 
 print(findLargeSum(2,3,1))
+print(findLargeSum(31,51,42))
