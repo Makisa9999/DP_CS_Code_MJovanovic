@@ -16,6 +16,5 @@ def findModSum4(d):
     return suma
 
 print(findModSum4([1.2,3.14,7.89]))
-
 print("Should get 35!")
 

@@ -4,7 +4,7 @@ def isEven(a):
             return True
         return False
     else:
-        print("Invalid Number")
+        return "Invalid Number!"
         
 print(isEven(2))
 print(isEven(3))

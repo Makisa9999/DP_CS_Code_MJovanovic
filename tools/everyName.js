@@ -1,6 +1,6 @@
 function everyName (a) {
     for (name in a) {
-        console.log('Hello ' + a[name] + ' Welcome to the pary')
+        console.log('Welcome' + a[name] + '!')
     }
     return 'Done'
 }
