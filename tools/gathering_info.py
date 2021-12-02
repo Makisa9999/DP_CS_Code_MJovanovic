@@ -18,6 +18,6 @@ while True:
     file = open(a + ".txt", "w")
     while True:
         print("The price of " + a + " is: " + str(part_Price()))
-        file.write(time.strftime("%H:%M:%S") + " Price of " + a + " is: " + str(part_Price() + "\n"))
+        file.write(time.strftime("%H:%M:%S") + "      Price of " + a + " is: " + str(part_Price() + "\n"))
     file.close()
 

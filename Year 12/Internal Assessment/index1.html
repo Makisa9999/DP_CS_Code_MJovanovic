@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="cardDiv">
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        var data = [
+
+            {
+                "id" : 1,
+                "subject" : "Mathematics",
+                "dueDate" : "2nd of June, 2022",
+                "color" : "blue",
+                "description" : "Submit by Email"
+            },
+            {
+                "id" : 2,
+                "subject" : "Economics",
+                "dueDate" : "2nd of May, 2022",
+                "color" : "grey",
+                "description" : "Submit on Brightspace"
+            },
+            {
+                "id" : 3,
+                "subject" : "English",
+                "dueDate" : "3nd of May, 2022",
+                "color" : "black",
+                "description" : "On Brightspace"
+            }
+
+        ]
+        
+        function createCard(id, subject, dueDate, color, description) {
+            var card = `<div class="col s12 m6">
+                            <div class="card ${color}">
+                                <div class="card-content white-text">
+                                    <span class="card-title center">${subject}</span>
+                                    <span class="card-subtitle center">${dueDate}</span>
+                                    <p>${description}</p>
+                                </div>
+                                <div class="card-action center">
+                                    <a class="btn" href="#" id="removeButton" onclick="removeCard()">REMOVE CARD</a>
+                                </div>
+                            </div>
+                        </div>`
+            return card
+        }
+        document.getElementById("removeButton").addEventListener("click", (e) => {
+            e.preventDefault()
+        })
+        // Write a function that removes the card
+        function removeCard () {
+            var x = document.getElementById("removeButton")
+            var y = x.parentElement.parentElement.parentElement
+            y.remove()
+        }
+
+        const cardDiv = document.getElementById("cardDiv")
+        
+        function findProperties(data) {
+            fullDiv = ""
+            for (let i in data) {
+                var id = data[i]["id"]
+                var subject = data[i]["subject"]
+                var dueDate = data[i]["dueDate"]
+                var color = data[i]["color"]
+                var description = data[i]["description"]
+                var newCard = createCard(id, subject, dueDate, color, description)
+                var fullDiv = fullDiv + newCard
+            }
+            cardDiv.innerHTML = cardDiv.innerHTML + fullDiv
+        }
+
+        findProperties(data)
+
+    </script>
+</body>
+</html>

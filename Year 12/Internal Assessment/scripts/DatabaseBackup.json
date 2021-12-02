@@ -1,0 +1,49 @@
+{
+  "bannedWords" : [ null, "curseword1", "curseword2", "curseword3" ],
+  "cards" : [ {
+    "color" : "blue",
+    "description" : "Submit by email",
+    "dueDate" : "2nd of July, 2022",
+    "id" : 0,
+    "subject" : "Physics"
+  }, {
+    "color" : "grey",
+    "description" : "Submit by Email",
+    "dueDate" : "2nd of July, 2021",
+    "id" : 1,
+    "subject" : "Mathematics"
+  }, {
+    "color" : "blue",
+    "description" : "Submit through Brightspace",
+    "dueDate" : "3rd of July, 2021",
+    "id" : 2,
+    "subject" : "Economics"
+  }, {
+    "color" : "orange",
+    "description" : "None",
+    "dueDate" : "2nd of August, 2021",
+    "id" : 3,
+    "subject" : "TOK"
+  } ],
+  "users" : [ {
+    "admin" : 1,
+    "email" : "admin@admin.com",
+    "password" : "admin"
+  }, {
+    "admin" : 0,
+    "email" : "mario@mario.com",
+    "password" : "mario"
+  }, {
+    "admin" : 0,
+    "email" : "jovanovic@jovanovic.com",
+    "password" : "jovanovic"
+  }, {
+    "admin" : 0,
+    "email" : "basar@basar.com",
+    "password" : "basar"
+  }, {
+    "admin" : 0,
+    "email" : "inan@inan.com",
+    "password" : "inan"
+  } ]
+}

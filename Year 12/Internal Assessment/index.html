@@ -1,0 +1,243 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="M4r10 J0v4n0v1c">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Homework Website</title>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar-fixed">
+        <nav class="blue">
+            <!-- This is the navigation bar used to navigate around the website -->
+            <div class="nav-wrapper container">
+                <!-- This is the logo of the navigation bar -->
+                <a href="#" class="brand-logo center">Homework Organizer</a>
+                <!-- These are all the links in the navigation bar -->
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- Element 1 -->
+                    <li><a href="#">Page 1</a></li>
+                    <!-- Element 2 -->
+                    <li><a href="#">Page 2</a></li>
+                    <!-- Element 3 -->
+                    <li><a href="#loginModal" class="modal-trigger">Login</a></li>
+                </ul>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <!-- END OF NAV BAR -->
+
+    <!-- SIDE NAV -->
+    <ul class="sidenav" id="mobile-demo">
+        <!-- Top red button to close the side nav -->
+        <li><a href="#" class="btn red sidenav-close" data-target="mobile-demo">Close!</a></li>
+        <!-- First link -->
+        <li><a href="#" class="sidenav-close">Task 1</a></li>
+        <!-- Second link -->
+        <li><a href="#" class="sidenav-close">Task 2</a></li>
+        <!-- Login link -->
+        <li><a href="#loginModal" class="sidenav-close modal-trigger">Login</a></li>
+    </ul>
+    <!-- END NAV BAR -->
+
+    <!-- Initial Modal -->
+    <div id="loginModal" class="modal">
+        <!-- Content of the modal -->
+        <div class="modal-content">
+            <!-- Heading in the modal -->
+            <h4>Login System</h4>
+            <!-- Paragraph in the modal  -->
+            <p>Please login or create your account!</p>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <!-- Button in the footer to close the modal -->
+            <a href="#!" class="waves-effect orange white-text btn-flat left modal-close modal-trigger" data-target="createAccount">Create an Account</a>
+            <a href="#!" class="waves-effect red white-text btn-flat right modal-close" style="margin-left:2px;">Cancel</a> <!-- modal-close use this to close the modal if you want -->
+            <a href="#!" class="waves-effect blue white-text btn-flat right modal-close modal-trigger" data-target="loginToAccount">Login</a>
+        </div>
+    </div>
+    <!-- End of initial modal -->
+
+    <!-- Create an account modal -->
+    <div id="createAccount" class="modal">
+        <!-- Content of the modal -->
+        <div class="modal-content">
+            <!-- Header -->
+            <h4>Create an Account</h4>
+            <form>
+                <div class="input-field col s12">
+                    <input type="email" class="validate" id="register_email_1">
+                    <label for="register_email_1">Email</label>
+                    <span class="helper-text" data-error="Cannot Approve" data-success="Approved">Helper text</span>
+                </div>
+                <div class="input-field col s12">
+                    <input type="email" class="validate" id="register_email_2">
+                    <label for="register_email_2">Email</label>
+                    <span class="helper-text" data-error="Cannot Approve" data-success="Approved">Helper text</span>
+                </div>
+                <div class="input-field col s12">
+                    <input type="password" id="register_password_1">
+                    <label for="register_password_1">Password</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="password" id="register_password_2">
+                    <label for="register_password_2">Password</label>
+                </div>
+            </form>
+            <p class="red-text" style="display: none;" id="wrong_input_message">Please make sure that you have entered everything correctly!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="waves-effect blue white-text btn-flat right modal-close" id="registerAccount">Create an account</a>
+            <a href="#!" class="waves-effect red white-text btn-flat left modal-close" id="registerCancel">Cancel</a>
+        </div>
+    </div>
+    <!-- End of create account modal -->
+
+    <!-- This is login form -->
+    <div id="loginToAccount" class="modal">
+        <!-- Content of the modal -->
+        <div class="modal-content">
+            <!-- Header -->
+            <h4>Login to your account!</h4>
+            <div class="modal-content">
+                <form>
+                    <div class="input-field col s12">
+                        <input type="email" class="validate" id="login_email_1">
+                        <label for="login_email_1">Email</label>
+                        <span class="helper-text" data-error="Cannot Approve" data-success="Approved">Helper text</span>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="password" id="login_password_1">
+                        <label for="login_password_1">Password</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="waves-effect blue white-text btn-flat right modal-close" id="loginAccount">Login to your account</a>
+            <a href="#!" class="waves-effect red white-text btn-flat left modal-close" id="loginCancel">Cancel</a>
+        </div>
+    </div>
+    <!-- End of Login Form -->
+
+    <!-- Fix this so it looks nice and it will always just fill the screen. -->
+    <img src="LandingPage.jpg" height="1080px" width="1920px" alt="Nature" style="margin-top:0;" width="100%">
+    
+    <!-- This is the body of my website -->
+    <div class="container" style="display: none;">
+        <h1 class="center">Welcome to our website!</h1>
+        <hr>
+        <img src="LandingPageFirstPicture.jpg" class="right" width="50%" alt="Boy Doing homework">
+        <div style="width: 49%">
+            <h5 class="black-text center">Welcome to our website where we are going to help you manage your homework!</h5>
+            <p class="left">Welcome dear customer. This website was made by Mario Jovanovic for his Computer Science IA. If you would like us to help you we can get you started by creating an account with our platform. You will see in the navigation menu button that has login written on it. You are going to press that button and then you are going to be taken to the menu where you can login to your account or create a new account. If you have already created your account you can <span class="blue-text">Login</span> to your account, but if this is your first time on our website I will ask you to press <span class="red-text">Create an Account</span> button.</p>
+            <p class="left">Now when the create an account menu pops up you are going to input your email and password twice and click create an account. After this you are going to go back to the login menu and then click <span class="blue-text">Login</span> this way you can enter your email and then you are going to be able to start managing your homework.</span></p>
+            <!-- Create another p-tag where you will explain how to make cards -->
+        </div>
+    </div>
+
+
+    <!-- Hidden content after login display -->
+    <div class="container" style="display: block;">
+        <br />
+        <a href="#modalCard" class="btn red modal-trigger" style="width:100%;">Add Homework/Test</a>
+        <div class="row" id="cardDiv">
+            
+        </div>
+
+    </div>
+    <!-- End of logged in display -->
+
+    <!-- Create a new card modal -->
+    <div class="modal" id="modalCard">
+        <div class="modal-content">
+            <h4>Please input all the details to add homework.</h4>
+            <form id="formNewCard">
+                <div class="input-field">
+                    <input type="text" id="subjectInput">
+                    <label for="subjectInput">Subject:</label>
+                </div>
+                <div class="input-field">
+                    <input type="date" id="dueDateInput">
+                    <label for="dueDateInput">Due Date:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="descriptionInput">
+                    <label for="descriptionInput">Description:</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="colorInput">
+                    <label for="colorInput">Color: Pick Below</label>
+                    <p>Legend: red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey</p>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn red white-text left modal-close" id="cancelCreateNewCardButton">Cancel</a>
+            <a href="#" class="btn blue white-text right modal-close" id="submitCreateNewCardButton">Submit</a>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAjdMz2ph_e7jUQbovY4XIvcuNWTFR6F-w",
+            authDomain: "iacomputerscience-38709.firebaseapp.com",
+            databaseURL: "https://iacomputerscience-38709-default-rtdb.firebaseio.com",
+            projectId: "iacomputerscience-38709",
+            storageBucket: "iacomputerscience-38709.appspot.com",
+            messagingSenderId: "111823188488",
+            appId: "1:111823188488:web:c9deb132a2e96398cc97bd",
+            measurementId: "G-CKN9VVYYY7"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+    </script>
+    <script>
+        // This is going t
+        document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                "draggable":true,
+                "edge":"left",
+                "inDuration":750,
+                "outDuration":750,
+                "preventScrolling":true
+            }
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                "inDuration":750,
+                "outDuration":750,
+                "opacity":0.75,
+                "preventScrolling":true,
+                "dismissible":false,
+                "startingTop":"10%"
+            }
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, options);
+        });
+
+    </script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
