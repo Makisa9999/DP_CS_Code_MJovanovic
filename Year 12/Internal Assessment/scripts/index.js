@@ -117,11 +117,15 @@ function createCard(id, subject, dueDate, color, description) {
                     <div class="card ${color}">
                         <div class="card-content white-text">
                             <span class="card-title center">${subject}</span>
-                            <span class="card-subtitle center">${dueDate}</span>
-                            <p>${description}</p>
+                            <div style="border:1px solid white;padding: 0px 2px 0px 2px;">
+                                <p>Due Date: ${dueDate}</p>
+                            </div>
+                            <div style="border:1px solid white;padding:2px;">
+                                <p>Description: <br />${description}</p>
+                            </div>
                         </div>
                         <div class="card-action center">
-                            <a class="btn removeButton" href="#" id="removeButton${id}" onclick="removeCard(this.id)">REMOVE CARD</a>
+                            <a class="btn removeButton" href="#" id="removeButton${id}" onclick="removeElementFromDatabase(this.id)">REMOVE CARD</a>
                         </div>
                     </div>
                 </div>`
@@ -132,21 +136,17 @@ function createCard(id, subject, dueDate, color, description) {
 // of the button and then it is going to get the last two numbers of the id of the button
 // which is the id of the element that is in the database. Then you are going to access
 // the parent that is in the database and remove it.
-function getTheElementId (strings) {
-    temporaryList = []
-    for (let i = 0; i < strings.length; i++) {
-        temporaryList.push(strings[i])
-    }
-    for (let j = 0; j < temporaryList.length; j++) {
-        temporaryList.shift()
-        console.log(temporaryList)
-    }
-}
 
-function removeElementFromDatabase (id) {
-    var id = "removeButton0"
-    
-} 
+function getTheElementId (strings) {
+    // This line will get the string which is the ID of the button, then since the ID for 
+    // each element in the database is proportional to the ID of the button since it is in
+    // the form removeButton + ID in the database. The part of the line .match(/\d/g) will 
+    // rip out everything that is a letter out of the string which will leave only numbers 
+    // in the string and then it would join every number together and tranfer it into an 
+    // interger and return it. 
+    numb = Number(strings.match(/\d/g).join(""));
+    return numb
+}
 
 // Write a function that removes the card
 function removeCard (a) {
@@ -171,7 +171,7 @@ function findProperties(data) {
     cardDiv.innerHTML = fullDiv
 }
 
-var data = []
+
 
 // Next thing to make is that when you click to remove a card the page is not going to scroll to the top. 
 
@@ -180,15 +180,15 @@ var data = []
 // DATABASE STUFF
 
 // Pulling the users from the database
-var users = database.ref("users/").on("value", (snapshot) => {
+var users2 = database.ref("users/").on("value", (snapshot) => {
     const usersLst = snapshot.val();
-    users = usersLst
+    var users = usersLst
 });
 
 //Pulling cards from the database
 var cards = database.ref("cards/").on("value", (snapshot) => {
     const cardsLst = snapshot.val();
-    data = cardsLst
+    var data = cardsLst
     findProperties(data)
 })
 
@@ -219,3 +219,29 @@ submitCreateNewCardButton.addEventListener("click", (e) => {
         "id": id
     });
 });
+
+function removeElementFromDatabase(buttonId) {
+    var idDatabase = getTheElementId(buttonId)
+    // Loop through the database and then you can find the ID of the element you are
+    // trying to delete and then you would get the parent id and delete the whole entry 
+    // in the database.
+    for (let key in data) {
+        if (data[key]["id"] === idDatabase) {
+            delete data[key]
+        }
+    }
+    database.ref("cards/").set(data)
+}
+
+function loginDatabase () {
+    var email = login_email_1.value
+    var password = login_password_1.value
+    database.ref("users/").once("value", (snapshot) => {
+        const usersLst = snapshot.val();
+        var userLoginData = usersLst
+    }).then(() => {
+        
+    })
+}
+
+console.log(loginDatabase())
