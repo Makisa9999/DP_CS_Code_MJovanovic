@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="M4r10 J0v4n0v1c">
 
-    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified Materialize CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,6 +28,7 @@
                 <a href="#" class="brand-logo left">Homework Organizer</a>
                 <!-- These are all the links in the navigation bar -->
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class='right-align dropdown-trigger' href='#' style="display:none; width: 300px;" id="adminCommand" data-target='adminDropdown'>Users</a></li>
                     <li><a href="#myAccount" id="loginLinks2" class="modal-trigger" style="display: none;">My Account</a></li>
                     <li><a href="#" id="loginLinks3" style="display: none;">Logout</a></li>
                     <!-- Element 1 -->
@@ -38,7 +39,9 @@
         </nav>
     </div>
     <!-- END OF NAV BAR -->
+    <ul id='adminDropdown' class='dropdown-content'>
 
+    </ul>
     <!-- SIDE NAV -->
     <ul class="sidenav" id="mobile-demo">
         <!-- Top red button to close the side nav -->
@@ -154,8 +157,10 @@
 
 
     <!-- Hidden content after login display -->
+    <!-- Add icons for brightspace -->
     <div class="container" style="display: none;" id="loggedInDiv">
         <br />
+        <p style="display:none;" id="badWordMessage" class="red-text center">This card contains banned words!</p>
         <a href="#modalCard" class="btn red modal-trigger" style="width:100%;">Add Homework/Test</a>
         <div class="row" id="cardDiv">
             
@@ -182,9 +187,29 @@
                     <label for="descriptionInput">Description:</label>
                 </div>
                 <div class="input-field">
-                    <input type="text" id="colorInput">
-                    <label for="colorInput">Color: Pick Below</label>
-                    <p>Legend: red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey</p>
+                    <select id="colorInput">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="red">Red</option>
+                        <option value="pink">Pink</option>
+                        <option value="purple">Purple</option>
+                        <option value="deep-purple">Deep Purple</option>
+                        <option value="indigo">Indigo</option>
+                        <option value="blue">Blue</option>
+                        <option value="light-blue">Light Blue</option>
+                        <option value="cyan">Cyan</option>
+                        <option value="teal">Teal</option>
+                        <option value="green">Green</option>
+                        <option value="light-green">Light Green</option>
+                        <option value="lime">Lime</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="amber">Amber</option>
+                        <option value="orange">Orange</option>
+                        <option value="deep-orange">Deep Orange</option>
+                        <option value="brown">Brown</option>
+                        <option value="grey">Grey</option>
+                        <option value="blue-gray">Blue Gray</option>
+                    </select>
+                    <label>Materialize Select</label>
                 </div>
             </form>
         </div>
@@ -198,18 +223,34 @@
     <div class="modal" id="myAccount">
         <div class="modal-content">
             <h5 id="activeUserParagraph">Welcome!</h5>
+            <a href="https://app.kognity.com/study/app/dashboard" class="btn left blue" style="width:33.3%;" target="_blank"><img src="images/download.png" alt="Kognity Logo" style="position:absolute;margin-top:8px;margin-left:-50px;" width="20px" height="20px">Kognity</a>
+            <a href="https://ucc.myschoolapp.com/app/student#login" target="_blank" style="width:33.3%;" class="btn left blue"><img src="images/UCCLOGO.png" alt="UCC Logo" style="position:absolute;margin-top:8px;margin-left:-50px;" width="20px" height="20px">Bluenet</a>
+            <a href="https://brightspace.ucc.on.ca/d2l/home" class="btn left blue" style="width:33.3%;" target="_blank"><img src="images/UCCLOGO.png" alt="UCC Logo" style="position:absolute;margin-top:8px;margin-left:-50px;" width="20px" height="20px">Brightspace</a>
+            <div id="adminOnly">
+                <br /><br />
+                <a href="#" class="btn red left" style="width: 50%;" onclick="adminViewAdmin()">ADMIN VIEW</a>
+                <a href="#" class="btn green left" style="width: 50%;" onclick="userViewAdmin()">USER VIEW</a>
+            </div>
+            <br /><br />
             <form id="bannedWordsForm" style="display:none;">
                 <div class="input-field">
                     <input type="text" id="curseWordInput">
                     <label for="curseWordInput">Enter Words You Want To Be Banned</label>
                 </div>
             </form>
+            
         </div>
         <div class="modal-footer">
             <a href="#" class="btn blue white-text modal-close right" style="display:none;" id="badWordSubmit">Submit</a>
             <a href="#" class="modal-close btn red white-text left" id="badWordClose">Close</a>
         </div>
     </div>
+
+    <!-- Admin view -->
+    <div class="container" id="adminDiv">
+
+    </div>
+
     <footer class="page-footer blue" id="footer">
         <div class="container">
             <div class="row">
@@ -242,8 +283,6 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -262,6 +301,12 @@
         var database = firebase.database();
     </script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            options = {}
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
+
         // This is going t
         document.addEventListener('DOMContentLoaded', function() {
             var options = {
@@ -288,6 +333,13 @@
             var instances = M.Modal.init(elems, options);
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+
+            }
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(elems, options);
+        });
     </script>
     <script src="scripts/index.js"></script>
 </body>

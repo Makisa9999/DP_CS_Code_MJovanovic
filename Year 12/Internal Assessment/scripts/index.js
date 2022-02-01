@@ -19,49 +19,108 @@ let encryption = (function(){
 
 // [Email, password, admin status]
 userList = []
+var decryptedUserList = []
 database.ref("users/").once("value", (snapshot) => {
     userList = snapshot.val()
-})
+    decryptedUserList = decryptAccounts(userList)
+});
 
 // Active user and current user
 var currentUser = []
 var activeUser = ""
 
-// Getting Elements for login. Login Function
+// Document Object Model - Getting all the objects for login function.
 var login_email_1 = document.getElementById("login_email_1")
 var login_password_1 = document.getElementById("login_password_1")
 var incorrect_password_message = document.getElementById("incorrect_password_message")
 var bannedWordsForm = document.getElementById("bannedWordsForm")
 var badWordSubmit = document.getElementById("badWordSubmit")
+var selectUser = document.getElementById("selectUser")
 
+// Naming a function checkLogin - takes 0 parameters
 function checkLogin () {
+    // Getting the value of email field that user inputted
     var email = login_email_1.value
+    // Getting the value of password field that user inputted
     var password = login_password_1.value
-    for (let i = 0; i < userList.length; i++) {
-        if ((userList[i]["email"] === email) && (userList[i]["password"] == password)) {
+    // Loop thought all the users in the database.
+    for (let key in userList) {
+        // Get the email from the database by calling the variable and accessing the key and the "email" field and then decrypt it.
+        var databaseEmail = encryption.decryptMess(userList[key]["email"], "your_email")
+        // Get the password from the database by calling the variable and accessing the key and the "password" field and then decrypt it.
+        var databasePassword = encryption.decryptMess(userList[key]["password"], "your_password")
+        // Check if the database email and password are the same as the email and password entered by user.
+        if ((databaseEmail === email) && (databasePassword === password)) {
+            // Get the modal that is used to login.
             var elem = document.getElementById("loginToAccount");
+            // Then this gets the component and all the data available
             var instance = M.Modal.getInstance(elem);
+            // Close the modal
             instance.close();
+            // This stops from incorrect password message showing
             incorrect_password_message.style.display = "none"
-            console.log("Successful login!")
-            currentUser.push(email)
+            // Set the currentUser list to empty.
+            currentUser = []
+            // Push the logged in user to the currentUser list
+            currentUser.push(databaseEmail)
+            // Set activeUser as current user at field 0
             activeUser = currentUser[0]
-            admin = userList[i]["admin"]
+            // Set the variable to either 0 or 1 whether the user is admin.
+            admin = userList[key]["admin"]
+            // Run this function so it displayes only cards made by the logged in user.
+            findProperties(data)
+            // If the user is admin
             if (admin === 1) {
+                // Allow the user to enter words to be banned
                 bannedWordsForm.style.display = "block"
+                // Allow the user to see the submit button for banned words
                 badWordSubmit.style.display = "block"
+                // Run the function where the admin is going to get all the users and will be able to see their cards.
+                setupSelect()
+            // if the user is not admin
             } else if (admin === 0) {
+                // Don't allow the user to see the form to submit banned words
                 bannedWordsForm.style.display = "none"
+                // Don't allow the user to see the sumbit button to the banned words form
                 badWordSubmit.style.display = "none"
             }
+        // if the user information is incorrect
         } else {
+            // Display message that it is incorrect. 
             incorrect_password_message.style.display = "block"
         }
 
     }
 }
 
+const selectAdmin = document.getElementById("adminDropdown")
+const adminCommand = document.getElementById("adminCommand")
 
+function setupSelect () {
+    adminCommand.style.display = "block"
+    var divSelectAdmin = ""
+    for (let key in userList) {
+        var decryptedEmail = encryption.decryptMess(userList[key]["email"], "your_email")
+        var htmlText = `<li><a href="#!" onclick="displayUser('${decryptedEmail}')">${decryptedEmail}</a></li>`
+        divSelectAdmin = divSelectAdmin + htmlText
+    }
+    selectAdmin.innerHTML = divSelectAdmin
+}
+
+const adminDiv = document.getElementById("adminDiv")
+
+function displayUser(displayedUser) {
+    console.log(displayedUser)
+    var finishedDiv = ""
+    // Code the function so it adds to inner html cards that the pressed user has. 
+    for (let key in data) {
+        if (data[key]["user"] === displayedUser) {
+            var newCard = createCard(data[key]["id"], data[key]["subject"], data[key]["dueDate"], data[key]["color"], data[key]["description"])
+            finishedDiv = finishedDiv + newCard
+        }
+    }
+    adminDiv.innerHTML = finishedDiv
+}
 
 // Getting elements for register. Register function.
 var register_email_1 = document.getElementById("register_email_1")
@@ -89,7 +148,6 @@ function checkRegister () {
                 console.log("User Exists!")
             }
         }
-
         if (password_1.length < 6 || password_2.length < 6) {
             // Display a message that will tell the user that their password is less than 6 characters.
             less_than_6_message.style.display = "block"
@@ -123,8 +181,7 @@ function checkRegister () {
                 var instance = M.Modal.getInstance(elem);
                 instance.close();
                 var temporary = {"email": encryption.encryptMess(email_1, "your_email"), "password": encryption.encryptMess(password_1, "your_password"), "admin": 0}
-                userList.push(temporary)
-                return userList
+                return temporary
             } else {
                 register_wrong_entry.style.display = "block";
                 user_exists_message.style.display = "none"
@@ -154,24 +211,42 @@ const loginLinks2 = document.getElementById("loginLinks2") // if active user = "
 const loginLinks3 = document.getElementById("loginLinks3") // if active user = "" display: none; if activeuser = something display: block;
 const logoutLinks = document.getElementById("logoutLinks") // if active user = "" display: block; if activeuser = something display: none;
 const background_image = document.getElementById("background-image")
+const adminOnly = document.getElementById("adminOnly")
 
 function checkIfLoggedIn () {
-    if (activeUser != "") {
+    if (activeUser != "" && activeUser != "admin@admin.com") {
         welcomePage.style.display = "none"
+        adminDiv.style.display = "none"
+        adminCommand.style.display = "none"
         loggedInDiv.style.display = "block"
         loginLinks2.style.display = "block"
         loginLinks3.style.display = "block"
         logoutLinks.style.display = "none"
         background_image.style.display = "none"
+        adminOnly.style.display = "none"
     } else if (activeUser == "") {
         welcomePage.style.display = "block"
+        adminDiv.style.display = "none"
+        adminCommand.style.display = "none"
         loggedInDiv.style.display = "none"
         loginLinks2.style.display = "none"
         loginLinks3.style.display = "none"
         logoutLinks.style.display = "block"
         background_image.style.display = "block"
+        adminOnly.style.display = "none"
+    } else if (activeUser == "admin@admin.com") {
+        welcomePage.style.display = "none"
+        adminDiv.style.display = "block"
+        adminCommand.style.display = "block"
+        loginLinks2.style.display = "block"
+        loginLinks3.style.display = "block"
+        logoutLinks.style.display = "none"
+        background_image.style.display = "none"
+        adminOnly.style.display = "block"
     }
 }
+
+
 
 // 6 lines below are used for login system to work.
 const loginButton = document.getElementById("loginAccount")
@@ -267,7 +342,6 @@ function removeCard (a) {
 }
 
 const cardDiv = document.getElementById("cardDiv")
-
 function findProperties(data) {
     fullDiv = ""
     for (let i in data) {
@@ -276,8 +350,14 @@ function findProperties(data) {
         var dueDate = data[i]["dueDate"]
         var color = data[i]["color"]
         var description = data[i]["description"]
-        var newCard = createCard(id, subject, dueDate, color, description)
-        var fullDiv = fullDiv + newCard
+        newCard = createCard(id, subject, dueDate, color, description)
+        aU = activeUser
+        userFromCard = data[i]["user"]
+        if (userFromCard == aU) {
+            var fullDiv = fullDiv + newCard
+        } else if (aU === "admin@admin.com") {
+            var fullDiv = fullDiv + newCard
+        }
     }
     cardDiv.innerHTML = fullDiv
 }
@@ -293,7 +373,7 @@ data = []
 // Pulling the users from the database
 database.ref("users/").on("value", (snapshot) => {
     userList = snapshot.val()
-    decryptAccounts(snapshot.val())
+    decryptedUserList = decryptAccounts(snapshot.val())
 })
 
 function decryptAccounts (listOfUsers) {
@@ -309,6 +389,7 @@ function decryptAccounts (listOfUsers) {
     return listOfUsers
 }
 
+var data = null
 //Pulling cards from the database
 var cards = database.ref("cards/").on("value", (snapshot) => {
     const cardsLst = snapshot.val();
@@ -323,6 +404,7 @@ var bannedWords = database.ref("bannedWords/").on("value", (snapshot) => {
 
 //We are making that when you submit a form, information would be gathered and then it is going to be pushed to the database.
 var submitCreateNewCardButton = document.getElementById("submitCreateNewCardButton")
+const badWordMessage = document.getElementById("badWordMessage")
 submitCreateNewCardButton.addEventListener("click", (e) => {
     e.preventDefault();
     var subject = subjectInput.value;
@@ -334,17 +416,19 @@ submitCreateNewCardButton.addEventListener("click", (e) => {
     descriptionInput.value = "";
     colorInput.value = "";
     var id = cardDiv.children.length;
-    var result = checkForBadWordsOnCards(subject, dueDate, description, color, id)
-    if (result == true) {
+    var result = checkForBadWordsOnCards(subject, dueDate, description, color)
+    if (result == false) {
+        badWordMessage.style.display = "none"
         database.ref("cards/").push({
             "subject": subject,
             "dueDate": dueDate,
             "description": description,
             "color": color,
-            "id": id
+            "id": id,
+            "user": activeUser
         });
     } else {
-        console.log("contains bad words")
+        badWordMessage.style.display = "block"
     }
 });
 
@@ -366,13 +450,14 @@ function registerUserInDatabase () {
     // the same push it to users and then take users and push it into the database so it 
     // updates and creates a new id.
     var a = checkRegister()
-    database.ref("users/").set(userList)
+    database.ref("users/").push(a)
 }
 
 function logout() {
     activeUser = ""
     checkIfLoggedIn()
     console.log("Logged Out!")
+    adminDiv.innerHTML = ""
 }
 
 document.getElementById("loginLinks3").addEventListener("click", (e) => {
@@ -389,16 +474,30 @@ badWordSubmit.addEventListener("click", (e) => {
     curseWordInput.value = ""
 })
 
-function checkForBadWordsOnCards (subject, dueDate, description, color, id) {
+function checkForBadWordsOnCards(subject, dueDate, description, color) {
+    var flagForBadWords = false
     for (let key in bannedWordsLst) {
-        subjectTemp = subject.indexOf(bannedWordsLst[key])
-        dueDateTemp = dueDate.indexOf(bannedWordsLst[key])
-        descriptionTemp = description.indexOf(bannedWordsLst[key])
-        colorTemp = color.indexOf(bannedWordsLst[key])
+        badWord = bannedWordsLst[key]
+        subjectTemp = subject.includes(badWord)
+        dueDateTemp = dueDate.includes(badWord)
+        descriptionTemp = description.includes(badWord)
+        colorTemp = color.includes(badWord)
+        if (subjectTemp != false || dueDateTemp != false || descriptionTemp != false || colorTemp != false) {
+            flagForBadWords = true
+            return flagForBadWords
+        } else {
+            flagForBadWords = false
+        }
     }
-    if ((subjectTemp == -1) && (dueDateTemp == -1) && (descriptionTemp == -1) && (colorTemp == -1)) {
-        return true
-    } else {
-        return false
-    }
+    return flagForBadWords
+}
+
+function adminViewAdmin () {
+    adminDiv.style.display = "block"
+    loggedInDiv.style.display = "none"
+}
+
+function userViewAdmin () {
+    adminDiv.style.display = "none"
+    loggedInDiv.style.display = "block"
 }
