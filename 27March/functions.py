@@ -12,17 +12,18 @@ def isPrime(n):
         return True
     else:
         return False
-# print(isPrime(1))
-# print(isPrime(2))
-# print(isPrime(3))
-# print(isPrime(4))
-# print(isPrime(5))
-# print(isPrime(6))
-# print(isPrime(7))
-# print(isPrime(8))
-# print(isPrime(9))
-# print(isPrime(10))
-# print(isPrime(11))
+
+print(isPrime(1))
+print(isPrime(2))
+print(isPrime(3))
+print(isPrime(4))
+print(isPrime(5))
+print(isPrime(6))
+print(isPrime(7))
+print(isPrime(8))
+print(isPrime(9))
+print(isPrime(10))
+print(isPrime(11))
 
 
 def primeLessThan(n):
